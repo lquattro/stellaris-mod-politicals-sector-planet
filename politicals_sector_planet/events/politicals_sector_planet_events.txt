@@ -1,0 +1,26 @@
+############################
+#
+# Politicals Sector Planet
+#
+# Written by lquattro
+#
+############################
+
+namespace = politicals
+
+country_event = {
+   id = politicals.1
+   title = "Test event triggered by edict"
+   #title = "politicals.1.name"
+   desc = "Description event..."
+   #desc = "politicals.1.desc"
+   picture = GFX_evt_satellite_in_orbit
+   show_sound = event_sensor_ping
+   
+   trigger = {
+      NOT = { has_country_flag = starting_event }
+      is_ai = no
+   }
+
+   is_triggered_only = yes
+}

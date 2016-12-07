@@ -1,0 +1,297 @@
+############################
+#
+# Politicals Sector Planet
+# 
+# Written by lquattro
+#
+############################
+
+#######################
+# Pacifist Government
+
+# Small increase
+country_edict = {
+   # Name of edict
+   name = "small_increase_controllable_planet_pacifist"
+
+   # Edict effects
+   modifier = {
+      country_core_sector_system_cap = 15 
+   }
+   
+   # The cost of influence for this edict.
+   influence_cost = 0.5
+   
+   # The conditions to activate it.
+   allow = {
+      NOR = {
+         has_country_edict = medium_increase_controllable_planet_pacifist
+         has_country_edict = large_increase_controllable_planet_pacifist
+      }
+   }
+
+   # The conditions to visible it.
+   potential = {
+      OR = {
+         # Pacifist Democracy
+         has_government = moral_democracy
+         # Advanced Pacifist Democracy
+         has_government = irenic_democracy
+         # Pacifist Oligarchy
+         has_government = peaceful_bureaucracy
+         # Advanced Pacifist Oligarchy
+         has_government = irenic_protectorate
+         # Pacifist Autocracy
+         has_government = enlightened_monarchy
+         # Advanced Pacifist Autocracy
+         has_government = irenic_monarchy
+      }
+   }
+   
+   # How likely(probable) the AI is to take this edict.
+   ai_weight = {
+      weight = 0
+   }
+
+   # Scripted effect
+   effect = {
+#      country_event = { id = politicals.1 days = 0 }
+   } 
+}
+
+# Medium increase
+country_edict = {
+   # Name of edict
+   name = "medium_increase_controllable_planet_pacifist"
+
+   # Edict effects for all
+   modifier = {
+      country_core_sector_system_cap = 25
+   }
+   
+   # The cost of influence for this edict.
+   influence_cost = 1
+   
+   # The conditions to activate it.
+   allow = {
+      NOR = {
+         has_country_edict = small_increase_controllable_planet_pacifist
+         has_country_edict = large_increase_controllable_planet_pacifist
+      }
+   }
+   
+   # The conditions to visible it.
+   potential = {
+      OR = {
+         # Pacifist Democracy
+         has_government = moral_democracy
+         # Advanced Pacifist Democracy
+         has_government = irenic_democracy
+         # Pacifist Oligarchy
+         has_government = peaceful_bureaucracy
+         # Advanced Pacifist Oligarchy
+         has_government = irenic_protectorate
+         # Pacifist Autocracy
+         has_government = enlightened_monarchy
+         # Advanced Pacifist Autocracy
+         has_government = irenic_monarchy
+      }
+   }
+
+   # How likely(probable) the AI is to take this edict.
+   ai_weight = {
+      weight = 0
+   }  
+   
+   # The technologies required
+   prerequisites = {
+#      "tech_repeatable_improved_core_system_cap"
+   }
+}
+
+# Large increase
+country_edict = {
+   # Name of edict
+   name = "large_increase_controllable_planet_pacifist"
+
+   # Edict effects
+   modifier = {
+      country_core_sector_system_cap = 80 
+   }
+   
+   # The cost of influence for this edict.
+   influence_cost = 2
+   
+   # The conditions to activate it.
+   allow = {
+      NOR = {
+         has_country_edict = medium_increase_controllable_planet_pacifist
+         has_country_edict = small_increase_controllable_planet_pacifist
+      }
+   }
+   
+   # How likely(probable) the AI is to take this edict.
+   ai_weight = {
+      weight = 0
+   }
+
+   # Scripted effect
+   effect = {
+#      country_event = { id = politicals.1 days = 0 }
+   } 
+}
+
+#######################
+# Other Government
+
+# Small increase
+country_edict = {
+   # Name of edict
+   name = "small_increase_controllable_planet_other"
+
+   # Edict effects
+   modifier = {
+      country_core_sector_system_cap = 10 
+   }
+   
+   # The cost of influence for this edict.
+   influence_cost = 0.5
+   
+   # The conditions to activate it.
+   allow = {
+      NOR = {
+         has_country_edict = medium_increase_controllable_planet_other
+         has_country_edict = large_increase_controllable_planet_other
+      }
+   }
+
+   # The conditions to visible it.
+   potential = {
+      NOR = {
+         # Pacifist Democracy
+         has_government = moral_democracy
+         # Advanced Pacifist Democracy
+         has_government = irenic_democracy
+         # Pacifist Oligarchy
+         has_government = peaceful_bureaucracy
+         # Advanced Pacifist Oligarchy
+         has_government = irenic_protectorate
+         # Pacifist Autocracy
+         has_government = enlightened_monarchy
+         # Advanced Pacifist Autocracy
+         has_government = irenic_monarchy
+      }
+   }
+   
+   # How likely(probable) the AI is to take this edict.
+   ai_weight = {
+      weight = 0
+   }
+
+   # Scripted effect
+   effect = {
+#      country_event = { id = politicals.1 days = 0 }
+   } 
+}
+
+# Medium increase
+country_edict = {
+   # Name of edict
+   name = "medium_increase_controllable_planet_other"
+
+   # Edict effects for all
+   modifier = {
+      country_core_sector_system_cap = 20
+      pop_happiness = -0.01
+   }
+   
+   # The cost of influence for this edict.
+   influence_cost = 1
+   
+   # The conditions to activate it.
+   allow = {
+      NOR = {
+         has_country_edict = small_increase_controllable_planet_other
+         has_country_edict = large_increase_controllable_planet_other
+      }
+   }
+   
+   # The conditions to visible it.
+   potential = {
+      NOR = {
+         # Pacifist Democracy
+         has_government = moral_democracy
+         # Advanced Pacifist Democracy
+         has_government = irenic_democracy
+         # Pacifist Oligarchy
+         has_government = peaceful_bureaucracy
+         # Advanced Pacifist Oligarchy
+         has_government = irenic_protectorate
+         # Pacifist Autocracy
+         has_government = enlightened_monarchy
+         # Advanced Pacifist Autocracy
+         has_government = irenic_monarchy
+      }
+   }
+
+   # How likely(probable) the AI is to take this edict.
+   ai_weight = {
+      weight = 0
+   }  
+   
+   # The technologies required
+   prerequisites = {
+#      "tech_repeatable_improved_core_system_cap"
+   }
+}
+
+# Large increase
+country_edict = {
+   # Name of edict
+   name = "large_increase_controllable_planet_other"
+
+   # Edict effects
+   modifier = {
+      country_core_sector_system_cap = 70
+      pop_happiness = -0.02
+   }
+   
+   # The cost of influence for this edict.
+   influence_cost = 2
+      
+   # The conditions to activate it
+   allow = {
+      NOR = {
+         has_country_edict = medium_increase_controllable_planet_other
+         has_country_edict = small_increase_controllable_planet_other
+      }
+   }
+
+   # The conditions to visible it.
+   potential = {
+      NOR = {
+         # Pacifist Democracy
+         has_government = moral_democracy
+         # Advanced Pacifist Democracy
+         has_government = irenic_democracy
+         # Pacifist Oligarchy
+         has_government = peaceful_bureaucracy
+         # Advanced Pacifist Oligarchy
+         has_government = irenic_protectorate
+         # Pacifist Autocracy
+         has_government = enlightened_monarchy
+         # Advanced Pacifist Autocracy
+         has_government = irenic_monarchy
+      }
+   }
+   
+   # How likely(probable) the AI is to take this edict.
+   ai_weight = {
+      weight = 0
+   }  
+   
+   # The technologies required
+   prerequisites = {
+#      "tech_repeatable_improved_core_system_cap"
+   }
+}

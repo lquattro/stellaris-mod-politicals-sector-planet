@@ -1,0 +1,23 @@
+﻿l_english:
+ ####################################
+ # Edicts
+ ####################################
+#  Empire Edicts
+ edict_small_increase_controllable_planet_other:0 "Small edict favoring the control of planets"
+ edict_small_increase_controllable_planet_other_desc:0 "Leader controlled planetary capacities slightly increased"
+ 
+ edict_medium_increase_controllable_planet_other:0 "Medium edict favoring the control of planets"
+ edict_medium_increase_controllable_planet_other_desc:0 "Leader controlled planetary capacities goodly increased"
+ 
+ edict_large_increase_controllable_planet_other:0 "Large edict favoring the control of planets"
+ edict_large_increase_controllable_planet_other_desc:0 "Leader controlled planetary capacities greatly increased" 
+ 
+ # Pacifist Edicts
+ edict_small_increase_controllable_planet_pacifist:0 "Small edict favoring the control of planets"
+ edict_small_increase_controllable_planet_pacifist_desc:0 "Leader controlled planetary capacities slightly increased"
+ 
+ edict_medium_increase_controllable_planet_pacifist:0 "Medium edict favoring the control of planets"
+ edict_medium_increase_controllable_planet_pacifist_desc:0 "Leader controlled planetary capacities goodly increased"
+ 
+ edict_large_increase_controllable_planet_pacifist:0 "Large edict favoring the control of planets"
+ edict_large_increase_controllable_planet_pacifist_desc:0 "Leader controlled planetary capacities greatly increased"

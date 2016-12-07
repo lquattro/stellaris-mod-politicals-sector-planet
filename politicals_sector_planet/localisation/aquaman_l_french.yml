@@ -1,0 +1,23 @@
+﻿l_french:
+ ####################################
+ # Edicts
+ ####################################
+#  Empire Edicts
+ edict_small_increase_controllable_planet_other:0 "Petit décrèt favorisant le contrôle des planêtes"
+ edict_small_increase_controllable_planet_other_desc:0 "Capacités planétaires contrôlées par le leader légèrement augmentées"
+ 
+ edict_medium_increase_controllable_planet_other:0 "Décrèt favorisant le contrôle des planêtes"
+ edict_medium_increase_controllable_planet_other_desc:0 "Capacités planétaires contrôlées par le leader bien augmentées"
+ 
+ edict_large_increase_controllable_planet_other:0 "Large décrèt favorisant le contrôle des planêtes"
+ edict_large_increase_controllable_planet_other_desc:0 "Capacités planétaires contrôlées par le leader grandement augmentées"
+ 
+ # Pacifist Edicts
+ edict_small_increase_controllable_planet_pacifist:0 "Petit décrèt favorisant le contrôle des planêtes"
+ edict_small_increase_controllable_planet_pacifist_desc:0 "Capacités planétaires contrôlées par le leader légèrement augmentées"
+ 
+ edict_medium_increase_controllable_planet_pacifist:0 "Décrèt favorisant le contrôle des planêtes"
+ edict_medium_increase_controllable_planet_pacifist_desc:0 "Capacités planétaires contrôlées par le leader bien augmentées"
+ 
+ edict_large_increase_controllable_planet_pacifist:0 "Large décrèt favorisant le contrôle des planêtes"
+ edict_large_increase_controllable_planet_pacifist_desc:0 "Capacités planétaires contrôlées par le leader grandement augmentées"
