@@ -30,6 +30,11 @@ FR : Ce mode permet d'ajouter un gameplay suplémentaire sur les secteurs de pla
 [*]Chain events delete decreased happiness
 [/list]
 
+[h1]Licence GPL-3.0[/h1]
+You can retrieve this mod on GitHub : [url=https://github.com/lquattro/stellaris-mod-politicals-sector-planet]  GitHub Politicals Sector Planet [/url]
+
+You can Follow me on steam, if you want receive the news (mod) and mod added. 
+
 [h1]Another Mod :[/h1]
 [list]
 [*] [url=http://steamcommunity.com/sharedfiles/filedetails/?id=686374827]  Sector Planet to 50 [/url]  [i](link steam)[/i]
