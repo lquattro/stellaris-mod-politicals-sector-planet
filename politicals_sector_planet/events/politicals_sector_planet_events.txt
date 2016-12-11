@@ -8,19 +8,134 @@
 
 namespace = politicals
 
+#Triggering Event (HIDDEN)
 country_event = {
    id = politicals.1
-   title = "Test event triggered by edict"
-   #title = "politicals.1.name"
-   desc = "Description event..."
-   #desc = "politicals.1.desc"
-   picture = GFX_evt_satellite_in_orbit
-   show_sound = event_sensor_ping
-   
+   hide_window = yes
+   fire_only_once = yes
+   is_triggered_only = yes
+
    trigger = {
-      NOT = { has_country_flag = starting_event }
       is_ai = no
+      NOT = {
+         has_country_flag = displeasure_echoes
+      }
    }
 
+   immediate = {
+      set_country_flag = displeasure_echoes
+
+      begin_event_chain = {
+         event_chain = "displeasure_echoes_chain"
+         target = ROOT
+      }
+      country_event = { id = politicals.10 days = 60 random = 40 }
+   }
+}
+
+# Approaching Displeasure Echoes
+country_event = {
+   id = politicals.10
+   title = "politicals.10.name"
+   desc = "politicals.10.desc"
+   picture = GFX_evt_metropolis
+   show_sound = advisor_notification_planet_in_revolt
+   
    is_triggered_only = yes
+
+   # Authoritarian speech
+   option = {
+      name = politicals.10.a
+      response_text = politicals.10.a.response
+      country_event = { id = politicals.11 }
+      modifier = {
+         country_core_sector_system_cap = 40 
+      }
+   }
+
+   # Economic speech
+   option = {
+      name = politicals.10.b
+      response_text = politicals.10.b.response
+      country_event = { id = politicals.12 }
+      modifier = {
+         country_core_sector_system_cap = 30 
+      }
+   }
+}
+
+# Authoritarian speech Event (HIDDEN)
+country_event = {
+   id = politicals.11
+   hide_window = yes
+
+   is_triggered_only = yes
+
+   trigger = {
+
+   }
+
+   immediate = {
+      random_list = {
+         60 = {
+            planet_event = { id = politicals.102 } # Failed
+         }
+         40 = {
+            planet_event = { id = politicals.101 } # Success
+         }
+      }
+   }
+}
+
+# Economic speech Event (HIDDEN)
+country_event = {
+   id = politicals.12
+   hide_window = yes
+
+   is_triggered_only = yes
+
+   trigger = {
+
+   }
+
+   immediate = {
+      random_list = {
+         40 = {
+            planet_event = { id = politicals.102 } # Failed
+         }
+         60 = {
+            planet_event = { id = politicals.101 } # Success
+         }
+      } 
+   }
+}
+
+# Pop Appeasement Event
+country_event = {
+   id = politicals.101   
+   title = "politicals.101.name"
+   desc = "politicals.101.desc"
+
+   is_triggered_only = yes
+
+   immediate = {
+      end_event_chain = "displeasure_echoes_chain"
+      remove_country_flag = displeasure_echoes
+      set_country_flag = pop_echoes_approuved_edict
+   }
+}
+
+# Pop Not Happy Event
+country_event = {
+   id = politicals.102
+   title = "politicals.102.name"
+   desc = "politicals.102.desc"
+
+   is_triggered_only = yes
+
+   immediate = {
+      end_event_chain = "displeasure_echoes_chain"
+      remove_country_flag = displeasure_echoes
+      set_country_flag = pop_echoes_not_approuved_edict
+   }
 }
