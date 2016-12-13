@@ -1,0 +1,18 @@
+﻿l_english:
+ ####################################
+ # Other Events Politicals 
+ ####################################
+ # Approaching Displeasure Echoes
+ politicals.1.name:0 ""
+ politicals.1.desc:0 ""
+ # Politicals Speech
+ politicals.10.name:0 ""
+ politicals.10.desc:0 ""
+ politicals.10.a:0 ""
+ politicals.10.b:0 ""
+ # Pop Appeasement Event
+ politicals.101.name:0 ""
+ politicals.101.desc:0 ""
+ # Pop Not Happy Event
+ politicals.102.name:0 ""
+ politicals.102.desc:0 ""

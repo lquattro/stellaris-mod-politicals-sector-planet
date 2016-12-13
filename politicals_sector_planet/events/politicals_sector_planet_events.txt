@@ -8,14 +8,18 @@
 
 namespace = politicals
 
-#Triggering Event (HIDDEN)
+# Approaching Displeasure Echoes
 country_event = {
    id = politicals.1
-   hide_window = yes
-   fire_only_once = yes
+   title = "politicals.1.name"
+   desc = "politicals.1.desc"
+   picture = GFX_evt_metropolis
+   show_sound = advisor_notification_planet_in_revolt
+
    is_triggered_only = yes
 
    trigger = {
+      has_country_edict = small_increase_controllable_planet_other
       is_ai = no
       NOT = {
          has_country_flag = displeasure_echoes
@@ -23,44 +27,36 @@ country_event = {
    }
 
    immediate = {
+      country_event = { id = politicals.10 days = 5 random = 1 }
       set_country_flag = displeasure_echoes
 
-      begin_event_chain = {
-         event_chain = "displeasure_echoes_chain"
-         target = ROOT
-      }
-      country_event = { id = politicals.10 days = 60 random = 40 }
+      #begin_event_chain = {
+      #   event_chain = "displeasure_echoes_chain"
+      #   target = ROOT
+      #}
    }
 }
 
-# Approaching Displeasure Echoes
+# Politicals Speech
 country_event = {
    id = politicals.10
    title = "politicals.10.name"
    desc = "politicals.10.desc"
-   picture = GFX_evt_metropolis
-   show_sound = advisor_notification_planet_in_revolt
+   picture = GFX_evt_physics_research
+   show_sound = event_alien_nature
    
    is_triggered_only = yes
-
+   
    # Authoritarian speech
    option = {
       name = politicals.10.a
-      response_text = politicals.10.a.response
       country_event = { id = politicals.11 }
-      modifier = {
-         country_core_sector_system_cap = 40 
-      }
    }
 
    # Economic speech
    option = {
       name = politicals.10.b
-      response_text = politicals.10.b.response
       country_event = { id = politicals.12 }
-      modifier = {
-         country_core_sector_system_cap = 30 
-      }
    }
 }
 
@@ -71,17 +67,19 @@ country_event = {
 
    is_triggered_only = yes
 
-   trigger = {
-
-   }
-
    immediate = {
       random_list = {
-         60 = {
-            planet_event = { id = politicals.102 } # Failed
+         10 = {
+            country_event = { id = politicals.103 days = 5 random = 1 } # Crit Failed
          }
          40 = {
-            planet_event = { id = politicals.101 } # Success
+            country_event = { id = politicals.102  days = 5 random = 1 } # Failed
+         }
+         40 = {
+            country_event = { id = politicals.101  days = 5 random = 1 } # Success
+         }
+         10 = {
+            country_event = { id = politicals.100 days = 5 random = 1 } # Crit Success
          }
       }
    }
@@ -94,19 +92,43 @@ country_event = {
 
    is_triggered_only = yes
 
-   trigger = {
-
-   }
-
    immediate = {
       random_list = {
-         40 = {
-            planet_event = { id = politicals.102 } # Failed
+         5 = {
+            country_event = { id = politicals.103 days = 5 random = 1 } # Crit Failed
          }
-         60 = {
-            planet_event = { id = politicals.101 } # Success
+         45 = {
+            country_event = { id = politicals.102 days = 5 random = 1 } # Failed
+         }
+         55 = {
+            country_event = { id = politicals.101 days = 5 random = 1 } # Success
+         }
+         5 = {
+            country_event = { id = politicals.100 days = 5 random = 1 } # Crit Success
          }
       } 
+   }
+}
+
+# Crit Pop Appeasement Event
+country_event = {
+   id = politicals.100   
+   title = "politicals.100.name"
+   desc = "politicals.100.desc"
+   picture = GFX_evt_physics_research
+   show_sound = event_alien_nature
+
+   is_triggered_only = yes
+
+   immediate = {
+      end_event_chain = "displeasure_echoes_chain"
+      remove_country_flag = displeasure_echoes
+      set_country_flag = pop_echoes_approuved_edict
+
+      add_modifier = {
+         modifier = "light2_increase_pop_happiness"
+         days = -1
+      }
    }
 }
 
@@ -115,6 +137,8 @@ country_event = {
    id = politicals.101   
    title = "politicals.101.name"
    desc = "politicals.101.desc"
+   picture = GFX_evt_physics_research
+   show_sound = event_alien_nature
 
    is_triggered_only = yes
 
@@ -122,6 +146,11 @@ country_event = {
       end_event_chain = "displeasure_echoes_chain"
       remove_country_flag = displeasure_echoes
       set_country_flag = pop_echoes_approuved_edict
+
+      add_modifier = {
+         modifier = "light_increase_pop_happiness"
+         days = -1
+      }
    }
 }
 
@@ -130,6 +159,8 @@ country_event = {
    id = politicals.102
    title = "politicals.102.name"
    desc = "politicals.102.desc"
+   picture = GFX_evt_physics_research
+   show_sound = event_alien_nature
 
    is_triggered_only = yes
 
@@ -137,5 +168,60 @@ country_event = {
       end_event_chain = "displeasure_echoes_chain"
       remove_country_flag = displeasure_echoes
       set_country_flag = pop_echoes_not_approuved_edict
+      
+      add_modifier = {
+         modifier = "light_decrease_pop_happiness"
+         days = -1
+      }
    }
+}
+
+# Crit Pop Not Happy Event
+country_event = {
+   id = politicals.103
+   title = "politicals.103.name"
+   desc = "politicals.103.desc"
+   picture = GFX_evt_physics_research
+   show_sound = event_alien_nature
+
+   is_triggered_only = yes
+
+   immediate = {
+      end_event_chain = "displeasure_echoes_chain"
+      remove_country_flag = displeasure_echoes
+      set_country_flag = pop_echoes_not_approuved_edict
+
+      add_modifier = {
+         modifier = "light2_decrease_pop_happiness"
+         days = -1
+      }
+   }
+}
+
+# Disable modifier event (HIDDEN)
+country_event = {
+   id = politicals.200
+   title = "politicals.200.name"
+   desc = "politicals.200.desc"
+   picture = GFX_evt_physics_research
+   show_sound = event_alien_nature
+   #hide_window = yes
+
+   mean_time_to_happen = { days = 1 }
+
+   #is_triggered_only = yes
+
+   trigger = {
+      NOT = {
+         has_country_edict = small_increase_controllable_planet_other
+      }
+   }
+
+   immediate = {
+      remove_modifier = "light_decrease_pop_happiness"
+      remove_modifier = "light2_decrease_pop_happiness"
+      remove_modifier = "light_increase_pop_happiness"
+      remove_modifier = "light2_increase_pop_happiness"
+   }
+
 }

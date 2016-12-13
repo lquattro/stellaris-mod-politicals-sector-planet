@@ -21,3 +21,8 @@
  
  edict_large_increase_controllable_planet_pacifist:0 "Large décrèt favorisant le contrôle des planêtes"
  edict_large_increase_controllable_planet_pacifist_desc:0 "Capacités planétaires contrôlées par le leader grandement augmentées"
+
+ ####################################
+ # Static modifiers
+ ####################################
+ 
