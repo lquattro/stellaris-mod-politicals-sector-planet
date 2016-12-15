@@ -199,13 +199,14 @@ country_event = {
 }
 
 # Disable modifier event (HIDDEN)
+# Check all day
 country_event = {
    id = politicals.200
-   title = "politicals.200.name"
-   desc = "politicals.200.desc"
-   picture = GFX_evt_physics_research
-   show_sound = event_alien_nature
-   #hide_window = yes
+   #title = "politicals.200.name"
+   #desc = "politicals.200.desc"
+   #picture = GFX_evt_physics_research
+   #show_sound = event_alien_nature
+   hide_window = yes
 
    mean_time_to_happen = { days = 1 }
 
