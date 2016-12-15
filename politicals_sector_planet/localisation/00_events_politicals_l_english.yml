@@ -3,16 +3,17 @@
  # Other Events Politicals 
  ####################################
  # Approaching Displeasure Echoes
- politicals.1.name:0 ""
- politicals.1.desc:0 ""
+ politicals.1.name:0 "Discontent echoes of population "
+ politicals.1.desc:0 "Several echoes of dissatisfaction with the new edict are being heard among the population."
  # Politicals Speech
- politicals.10.name:0 ""
- politicals.10.desc:0 ""
- politicals.10.a:0 ""
- politicals.10.b:0 ""
+ politicals.10.name:0 "Political Speech"
+ politicals.10.desc:0 "He will good to make a speech for population to explain the interests and appease the anger of the population. \nThe longer we wait, more people will be angry. \nWould you like to make a speech?"
+ politicals.10.a:0 "Oui, je vais faire un discour pour leur faire comprendre que c'est comme ça et pas autrement."
+ politicals.10.b:0 "Oui, je vais faire un discour sur les bienfaits économiques du décrêt."
+ politicals.10.c:0 "Non, pas pour le moment."
  # Pop Appeasement Event
- politicals.101.name:0 ""
- politicals.101.desc:0 ""
+ politicals.101.name:0 "Apaisement de la population"
+ politicals.101.desc:0 "Le discour a apaisé la population. Ce bonheur va continuer pendant quelques mois."
  # Pop Not Happy Event
- politicals.102.name:0 ""
- politicals.102.desc:0 ""
+ politicals.102.name:0 "Grognement de la population"
+ politicals.102.desc:0 "Le discour a énervé encore plus la population ! Il faudra quelques mois pour apaiser la population."

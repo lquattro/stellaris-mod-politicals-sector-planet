@@ -5,6 +5,7 @@
 # Written by lquattro
 #
 ############################
+# Description : Boost SECTOR CAP PLANET
 
 #######################
 # Pacifist Government
@@ -219,7 +220,7 @@ country_edict = {
 
    # Edict effects for all
    modifier = {
-      country_core_sector_system_cap = 20
+      country_core_sector_system_cap = 30
    }
    
    # The cost of influence for this edict.

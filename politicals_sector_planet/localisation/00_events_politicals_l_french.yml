@@ -7,7 +7,7 @@
  politicals.1.desc:0 "Plusieurs échos de mécontentement à cause du nouveau décrêt se font entendre au sein de la population."
  # Politicals Speech
  politicals.10.name:0 "Discour politique"
- politicals.10.desc:0 "Il serait bon de faire un discour auprès de la population afin de faire descendre la tention au sein de la population. \nPlus on attend et plus la population sera en colère. \nVous voudriez faire un discour ?"
+ politicals.10.desc:0 "Il serait bon de faire un discour auprès de la population afin de faire descendre la tension au sein de la population. \nPlus on attend et plus la population sera en colère. \nVous voudriez faire un discour ?"
  politicals.10.a:0 "Oui, je vais faire un discour pour leur faire comprendre que c'est comme ça et pas autrement."
  politicals.10.b:0 "Oui, je vais faire un discour sur les bienfaits économiques du décrêt."
  politicals.10.c:0 "Non, pas pour le moment."
