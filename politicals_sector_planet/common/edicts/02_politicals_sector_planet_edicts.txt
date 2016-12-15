@@ -1,0 +1,72 @@
+############################
+#
+# Politicals Sector Planet
+# 
+# Written by lquattro
+#
+############################
+
+# Boost Science
+country_edict = {
+   # Name of edict
+   name = "buy_science_with_minerals"
+
+   # Edict effects
+   modifier = {
+      all_technology_research_speed = 0.40
+      resource_minerals_add = -40
+      tile_resource_minerals_mult = -0.1
+   }
+   
+   # The cost of influence for this edict.
+   influence_cost = 0.5
+   
+   # The conditions to activate it.
+   allow = {
+   }
+
+   # The conditions to visible it.
+   potential = {
+   }
+   
+   # How likely(probable) the AI is to take this edict.
+   ai_weight = {
+      weight = 0
+   }
+
+   # Scripted effect
+   effect = {
+   } 
+}
+
+# Boost Navy size
+country_edict = {
+   # Name of edict
+   name = "buy_science_with_minerals"
+
+   # Edict effects
+   modifier = {
+      navy_size_mult = 2
+      all_technology_research_speed = -0.40
+   }
+   
+   # The cost of influence for this edict.
+   influence_cost = 0.5
+   
+   # The conditions to activate it.
+   allow = {
+   }
+
+   # The conditions to visible it.
+   potential = {
+   }
+   
+   # How likely(probable) the AI is to take this edict.
+   ai_weight = {
+      weight = 0
+   }
+
+   # Scripted effect
+   effect = {
+   } 
+}
