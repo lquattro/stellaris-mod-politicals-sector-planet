@@ -67,7 +67,7 @@ country_edict = {
 
    # Edict effects for all
    modifier = {
-      country_core_sector_system_cap = 25
+      country_core_sector_system_cap = 35
    }
    
    # The cost of influence for this edict.
@@ -209,7 +209,7 @@ country_edict = {
 
    # Scripted effect
    effect = {
-      country_event = { id = politicals.1 days = 1 }
+      country_event = { id = politicals.1 days = 1 random = 30 }
    } 
 }
 
