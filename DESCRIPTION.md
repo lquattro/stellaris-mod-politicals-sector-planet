@@ -3,7 +3,7 @@
 ## Politicals Sector Planet
 
 ```
-[h1]-___Mod Verions 0.0.1___-[/h1]
+[h1]-___Mod Verions 0.1.0___-[/h1]
 
 EN : This mode adds additional gameplay on the sectors of planets and the political management of the edicts.
 FR : Ce mode permet d'ajouter un gameplay suplémentaire sur les secteurs de planêtes et la gestion politique des décrets. 

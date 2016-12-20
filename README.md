@@ -11,6 +11,7 @@ _This mod is working progress! It's a Alpha._
 _Mod Add :_ 
  - 3 edicts : small, medium, large increase (but happiness is decreased for some types of government : details in game)
  - french and english translation edicts
+ - events
 
 _Dev Feacture :_ 
  - Chain events boost capacity "cap sector planet" 
