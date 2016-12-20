@@ -169,7 +169,7 @@ country_event = {
       set_country_flag = pop_echoes_crit_approuved_edict
 
       add_modifier = {
-         modifier = "light2_increase_pop_happiness"
+         modifier = "small2_increase_pop_happiness"
          days = 365
       }
    }
@@ -191,7 +191,7 @@ country_event = {
       set_country_flag = pop_echoes_approuved_edict
 
       add_modifier = {
-         modifier = "light_increase_pop_happiness"
+         modifier = "small_increase_pop_happiness"
          days = 365
       }
    }
@@ -213,7 +213,7 @@ country_event = {
       set_country_flag = pop_echoes_not_approuved_edict
       
       add_modifier = {
-         modifier = "light_decrease_pop_happiness"
+         modifier = "small_decrease_pop_happiness"
          days = 365
       }
    }
@@ -239,7 +239,7 @@ country_event = {
       set_country_flag = pop_echoes_crit_not_approuved_edict
 
       add_modifier = {
-         modifier = "light2_decrease_pop_happiness"
+         modifier = "small2_decrease_pop_happiness"
          days = 365
       }
    }
@@ -262,9 +262,9 @@ country_event = {
    }
 
    immediate = {
-      remove_modifier = "light_decrease_pop_happiness"
-      remove_modifier = "light2_decrease_pop_happiness"
-      remove_modifier = "light_increase_pop_happiness"
-      remove_modifier = "light2_increase_pop_happiness"
+      remove_modifier = "small_decrease_pop_happiness"
+      remove_modifier = "small2_decrease_pop_happiness"
+      remove_modifier = "small_increase_pop_happiness"
+      remove_modifier = "small2_increase_pop_happiness"
    }
 }

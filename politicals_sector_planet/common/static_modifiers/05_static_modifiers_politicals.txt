@@ -6,18 +6,18 @@ economic_boost_planet_sector_cap = {
    country_core_sector_system_cap = 10
 }
 
-light_increase_pop_happiness = {
+small_increase_pop_happiness = {
    pop_happiness = 0.01
 }
 
-light2_increase_pop_happiness = {
+small2_increase_pop_happiness = {
    pop_happiness = 0.02
 }
 
-light_decrease_pop_happiness = {
+small_decrease_pop_happiness = {
    pop_happiness = -0.01
 }
 
-light2_decrease_pop_happiness = {
+small2_decrease_pop_happiness = {
    pop_happiness = -0.02
 }

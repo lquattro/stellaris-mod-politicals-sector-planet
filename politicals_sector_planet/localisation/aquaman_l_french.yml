@@ -25,4 +25,7 @@
  ####################################
  # Static modifiers
  ####################################
- 
+ small_increase_pop_happiness:0 "Augmentation du bonheur de la population"
+ small2_increase_pop_happiness:0 "Augmentation du bonheur de la population"
+ small_decrease_pop_happiness:0 "Diminution du bonheur de la population"
+ small2_decrease_pop_happiness:0 "Diminution du bonheur de la population"
