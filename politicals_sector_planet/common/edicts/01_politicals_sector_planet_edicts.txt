@@ -209,7 +209,7 @@ country_edict = {
 
    # Scripted effect
    effect = {
-      country_event = { id = politicals.1 days = 1 random = 30 }
+      country_event = { id = politicals.666 days = 1 random = 30 }
    } 
 }
 
@@ -250,9 +250,8 @@ country_edict = {
          # Advanced Pacifist Autocracy
          has_government = irenic_monarchy
       }
-      OR = {
-         has_country_flag = pop_echoes_approuved_edict
-         has_country_flag = pop_echoes_not_approuved_edict
+      if = {
+         has_country_flag = displeasure_speech
       }
    }
 
@@ -265,6 +264,11 @@ country_edict = {
    prerequisites = {
 #      "tech_repeatable_improved_core_system_cap"
    }
+
+   # Scripted effect
+   effect = {
+      country_event = { id = politicals.666 }
+   } 
 }
 
 # Large increase
@@ -304,9 +308,8 @@ country_edict = {
          # Advanced Pacifist Autocracy
          has_government = irenic_monarchy
       }
-      OR = {
-         has_country_flag = pop_echoes_approuved_edict
-         has_country_flag = pop_echoes_not_approuved_edict
+      if = {
+         has_country_flag = displeasure_speech
       }
    }
    
@@ -319,4 +322,9 @@ country_edict = {
    prerequisites = {
 #      "tech_repeatable_improved_core_system_cap"
    }
+
+   # Scripted effect
+   effect = {
+      country_event = { id = politicals.666 }
+   } 
 }

@@ -8,13 +8,10 @@
 
 namespace = politicals
 
-# Approaching Displeasure Echoes
+# Trigger Events Dipleasure Echoes (HIDDEN)
 country_event = {
-   id = politicals.1
-   title = "politicals.1.name"
-   desc = "politicals.1.desc"
-   picture = GFX_evt_metropolis
-   show_sound = advisor_notification_planet_in_revolt
+   id = politicals.666
+   hide_window = yes
 
    is_triggered_only = yes
 
@@ -31,9 +28,8 @@ country_event = {
             }
          }
          set_country_flag = displeasure_echoes
-         country_event = { id = politicals.10 days = 5 random = 2 }
+         country_event = { id = politicals.1 }
       }
-
       # Displeasure speech
       if = {
          limit = {
@@ -47,7 +43,10 @@ country_event = {
          limit = {
             has_country_flag = pop_echoes_crit_approuved_edict
          }
-         country_event = { id = politicals.100 }
+         add_modifier = {
+            modifier = "small2_increase_pop_happiness"
+            days = -1
+         }
       }
 
       # Approuved edict
@@ -55,7 +54,10 @@ country_event = {
          limit = {
             has_country_flag = pop_echoes_approuved_edict
          }
-         country_event = { id = politicals.101 }
+         add_modifier = {
+            modifier = "small_increase_pop_happiness"
+            days = -1
+         }
       }
 
       # Not approuved edict
@@ -63,7 +65,10 @@ country_event = {
          limit = {
             has_country_flag = pop_echoes_not_approuved_edict
          }
-         country_event = { id = politicals.102 }
+         add_modifier = {
+            modifier = "small_decrease_pop_happiness"
+            days = -1
+         }
       }
 
       # Crit not approuved edict
@@ -71,8 +76,26 @@ country_event = {
          limit = {
             has_country_flag = pop_echoes_crit_not_approuved_edict
          }
-         country_event = { id = politicals.103 }
+         add_modifier = {
+            modifier = "small2_decrease_pop_happiness"
+            days = -1
+         }
       }
+   }
+}
+
+# Approaching Displeasure Echoes
+country_event = {
+   id = politicals.1
+   title = "politicals.1.name"
+   desc = "politicals.1.desc"
+   picture = GFX_evt_metropolis
+   show_sound = advisor_notification_planet_in_revolt
+
+   is_triggered_only = yes
+
+   immediate = {
+      country_event = { id = politicals.10 days = 5 random = 2 }
    }
 }
 
@@ -93,24 +116,6 @@ country_event = {
    # Authoritarian speech
    option = {
       name = politicals.10.a
-      country_event = { id = politicals.11 days = 5 }
-   }
-
-   # Economic speech
-   option = {
-      name = politicals.10.b
-      country_event = { id = politicals.12 days = 5 }
-   }
-}
-
-# Authoritarian speech Event (HIDDEN)
-country_event = {
-   id = politicals.11
-   hide_window = yes
-
-   is_triggered_only = yes
-
-   immediate = {
       random_list = {
          10 = {
             country_event = { id = politicals.103 days = 5 } # Crit Failed
@@ -126,16 +131,10 @@ country_event = {
          }
       }
    }
-}
 
-# Economic speech Event (HIDDEN)
-country_event = {
-   id = politicals.12
-   hide_window = yes
-
-   is_triggered_only = yes
-
-   immediate = {
+   # Economic speech
+   option = {
+      name = politicals.10.b
       random_list = {
          5 = {
             country_event = { id = politicals.103 days = 5 } # Crit Failed
@@ -170,8 +169,9 @@ country_event = {
 
       add_modifier = {
          modifier = "small2_increase_pop_happiness"
-         days = 365
+         days = -1
       }
+      country_event = { id = politicals.110 days = 50 random = 50 }
    }
 }
 
@@ -192,8 +192,9 @@ country_event = {
 
       add_modifier = {
          modifier = "small_increase_pop_happiness"
-         days = 365
+         days = -1
       }
+      country_event = { id = politicals.110 days = 50 random = 50 }
    }
 }
 
@@ -214,8 +215,9 @@ country_event = {
       
       add_modifier = {
          modifier = "small_decrease_pop_happiness"
-         days = 365
+         days = -1
       }
+      country_event = { id = politicals.110 days = 50 random = 50 }
    }
 }
 
@@ -240,8 +242,35 @@ country_event = {
 
       add_modifier = {
          modifier = "small2_decrease_pop_happiness"
-         days = 365
+         days = -1
       }
+      country_event = { id = politicals.110 days = 50 random = 50 }
+   }
+}
+
+# Disable flag
+# End Displeasure Event (HIDDEN)
+country_event = {
+   id = politicals.110
+   title = "politicals.110.name"
+   desc = "politicals.110.desc"
+   picture = GFX_evt_metropolis
+   show_sound = event_scanner
+
+   is_triggered_only = yes
+
+   immediate = {
+      remove_country_flag = pop_echoes_crit_approuved_edict
+      remove_country_flag = pop_echoes_approuved_edict
+      remove_country_flag = pop_echoes_not_approuved_edict
+      remove_country_flag = pop_echoes_crit_not_approuved_edict
+      set_country_flag = end_displeasure_echoes
+
+      # remove modifier
+      remove_modifier = "small_decrease_pop_happiness"
+      remove_modifier = "small2_decrease_pop_happiness"
+      remove_modifier = "small_increase_pop_happiness"
+      remove_modifier = "small2_increase_pop_happiness"
    }
 }
 
